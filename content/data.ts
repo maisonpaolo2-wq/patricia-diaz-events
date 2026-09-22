@@ -20,11 +20,10 @@ export const site = {
 }
 
 export const navLinks = [
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Como trabajamos', href: '#proceso' },
-  { label: 'Bodas', href: '#portfolio' },
-  { label: 'Patricia', href: '#sobre-mi' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Servicios', href: '/servicios' },
+  { label: 'Bodas', href: '/bodas' },
+  { label: 'Patricia', href: '/sobre-mi' },
+  { label: 'Contacto', href: '/contacto' },
 ]
 
 export const services = [

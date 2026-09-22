@@ -5,6 +5,17 @@ import ContactForm from '@/components/ContactForm'
 import TestimonioCarousel from '@/components/TestimonioCarousel'
 import { site, services, process, testimonials, portfolioPhotos } from '@/content/data'
 
+const marqueeItems = [
+  'Bodas con Alma',
+  'Sevilla',
+  'Andalucia',
+  'Parejas Bonitas',
+  'Bodas Intimas',
+  'Con Personalidad',
+  'Agenda 2026',
+  'Andalucia',
+]
+
 export default function Home() {
   return (
     <main>
@@ -23,27 +34,41 @@ export default function Home() {
         <div className="hero__content">
           <p className="hero__tagline">Wedding Planner · Andalucia</p>
           <h1 className="hero__title">
-            Bodas<br />con Alma
+            <span className="hero__title-w1">Bodas</span>
+            <span className="hero__title-w2">con Alma</span>
           </h1>
           <p className="hero__sub">
             Para parejas que quieren una boda autentica, que se parezca a ellas.
           </p>
-          <a href="#contacto" className="btn btn-outline-light">Hablemos</a>
+          <div className="hero__cta-wrap">
+            <a href="#contacto" className="btn btn-outline-light">Hablemos</a>
+          </div>
         </div>
         <div className="hero__scroll" aria-hidden="true">
           <div className="hero__scroll-line" />
         </div>
       </section>
 
+      {/* MARQUEE */}
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee__track">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            i % 2 === 0
+              ? <span key={i} className="marquee__item">{item}</span>
+              : <span key={i} className="marquee__sep">·</span>
+          ))}
+        </div>
+      </div>
+
       {/* INTRO */}
       <section id="intro" className="section">
         <div className="wrap">
           <Reveal>
             <div className="intro__inner">
-              <blockquote className="intro__quote">
-                Una boda con alma es la que huele a quienes la viven.
-              </blockquote>
-              <div>
+              <div className="intro__left">
+                <blockquote className="intro__quote">
+                  Una boda con alma es la que huele a quienes la viven.
+                </blockquote>
                 <div className="intro__line" aria-hidden="true" />
                 <div className="intro__body">
                   <p>
@@ -54,10 +79,55 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="intro__cta">
-                  <a href="#servicios" className="btn btn-dark">Ver servicios</a>
+                  <a href="/servicios" className="btn btn-dark">Ver servicios</a>
                 </div>
               </div>
+              <div className="intro__photo">
+                <Image
+                  src="/photos/portfolio-2.jpg"
+                  alt="Pareja en patio andaluz con decoracion floral"
+                  fill
+                  sizes="(max-width: 960px) 100vw, 50vw"
+                />
+              </div>
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section className="section--sm" style={{ background: 'var(--niebla)' }}>
+        <div className="wrap">
+          <Reveal>
+            <div className="stats__grid">
+              <div className="stats__item">
+                <span className="stats__num">+10</span>
+                <span className="stats__label">anos de experiencia en Andalucia</span>
+              </div>
+              <div className="stats__item">
+                <span className="stats__num">+50</span>
+                <span className="stats__label">bodas celebradas con alma</span>
+              </div>
+              <div className="stats__item">
+                <span className="stats__num">100%</span>
+                <span className="stats__label">dedicacion a cada pareja</span>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* STATEMENT — el momento WOW */}
+      <section className="statement">
+        <div className="statement__inner">
+          <Reveal>
+            <blockquote className="statement__text">
+              Una gran boda no es<br />
+              la mas cara.<br />
+              Es la que mas<br />
+              se parece a vosotros.
+            </blockquote>
+            <p className="statement__attr">Patricia Diaz</p>
           </Reveal>
         </div>
       </section>
@@ -93,7 +163,7 @@ export default function Home() {
           </ul>
           <Reveal delay={1}>
             <div style={{ paddingTop: '48px', textAlign: 'center' }}>
-              <a href="#contacto" className="btn btn-dark">Consultar disponibilidad</a>
+              <a href="/servicios" className="btn btn-dark">Ver todos los servicios</a>
             </div>
           </Reveal>
         </div>
@@ -137,13 +207,16 @@ export default function Home() {
           />
           <Reveal delay={2}>
             <div style={{ paddingTop: '40px', textAlign: 'center' }}>
+              <a href="/bodas" className="btn btn-outline" style={{ marginRight: '16px' }}>
+                Ver galeria completa
+              </a>
               <a
                 href={site.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"
               >
-                Ver mas en Instagram
+                Ver en Instagram
               </a>
             </div>
           </Reveal>
@@ -177,7 +250,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="sobre__cta">
-                <a href="#contacto" className="btn btn-dark">Quiero conocerte</a>
+                <a href="/sobre-mi" className="btn btn-dark">Conocer a Patricia</a>
               </div>
             </Reveal>
           </div>

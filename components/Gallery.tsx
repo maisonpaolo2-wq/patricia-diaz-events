@@ -29,6 +29,9 @@ export default function Gallery({ images, alts = [] }: GalleryProps) {
               loading="lazy"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
+            <div className="portfolio__overlay" aria-hidden="true">
+              <span>{alts[i]}</span>
+            </div>
           </div>
         ))}
       </div>
