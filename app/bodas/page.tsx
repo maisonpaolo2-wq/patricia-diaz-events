@@ -5,7 +5,7 @@ import { site, portfolioPhotos } from '@/content/data'
 
 export const metadata: Metadata = {
   title: 'Bodas',
-  description: 'Galeria de bodas celebradas en Sevilla y Andalucia por Patricia Diaz Events.',
+  description: 'Galería de bodas celebradas en Sevilla y Andalucía por Patricia Díaz Events.',
 }
 
 export default function BodasPage() {
@@ -17,7 +17,7 @@ export default function BodasPage() {
             <p className="page-hero__eyebrow">{site.name}</p>
             <h1 className="page-hero__title">Bodas</h1>
             <p className="page-hero__sub">
-              Cada boda es una historia diferente. Estas son algunas de las que hemos tenido el honor de acompanar.
+              Cada boda es una historia diferente. Estas son algunas de las que hemos tenido el honor de acompañar.
             </p>
           </Reveal>
         </div>
@@ -38,10 +38,10 @@ export default function BodasPage() {
                 className="btn btn-outline"
                 style={{ marginRight: '16px' }}
               >
-                Ver mas en Instagram
+                Ver más en Instagram
               </a>
               <a href="/contacto" className="btn btn-dark">
-                Quiero mi boda asi
+                Quiero mi boda así
               </a>
             </div>
           </Reveal>
@@ -55,7 +55,7 @@ export default function BodasPage() {
               La vuestra puede ser la siguiente
             </h2>
             <p style={{ color: 'var(--texto-suave)', marginBottom: '32px', maxWidth: '48ch', margin: '0 auto 32px' }}>
-              {site.availability}. Si tu fecha esta libre, nos encantaria conoceros.
+              {site.availability}. Si tu fecha está libre, nos encantaría conoceros.
             </p>
             <a href="/contacto" className="btn btn-dark">Consultar disponibilidad</a>
           </Reveal>

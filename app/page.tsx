@@ -3,17 +3,16 @@ import Reveal from '@/components/Reveal'
 import Gallery from '@/components/Gallery'
 import ContactForm from '@/components/ContactForm'
 import TestimonioCarousel from '@/components/TestimonioCarousel'
-import { site, services, process, testimonials, portfolioPhotos } from '@/content/data'
+import { site, services, steps, testimonials, portfolioPhotos } from '@/content/data'
 
 const marqueeItems = [
   'Bodas con Alma',
   'Sevilla',
-  'Andalucia',
+  'Andalucía',
   'Parejas Bonitas',
-  'Bodas Intimas',
+  'Bodas Íntimas',
   'Con Personalidad',
   'Agenda 2026',
-  'Andalucia',
 ]
 
 export default function Home() {
@@ -24,7 +23,7 @@ export default function Home() {
         <div className="hero__bg">
           <Image
             src="/photos/hero.jpg"
-            alt="Boda intima en Andalucia — Patricia Diaz Events"
+            alt="Boda íntima en Andalucía, Patricia Díaz Events"
             fill
             priority
             sizes="100vw"
@@ -32,16 +31,16 @@ export default function Home() {
         </div>
         <div className="hero__overlay" aria-hidden="true" />
         <div className="hero__content">
-          <p className="hero__tagline">Wedding Planner · Andalucia</p>
+          <p className="hero__tagline">Wedding Planner · Andalucía</p>
           <h1 className="hero__title">
             <span className="hero__title-w1">Bodas</span>
             <span className="hero__title-w2">con Alma</span>
           </h1>
           <p className="hero__sub">
-            Para parejas que quieren una boda autentica, que se parezca a ellas.
+            Para parejas que quieren una boda auténtica, que se parezca a ellas.
           </p>
           <div className="hero__cta-wrap">
-            <a href="#contacto" className="btn btn-outline-light">Hablemos</a>
+            <a href="/contacto" className="btn btn-outline-light">Hablemos</a>
           </div>
         </div>
         <div className="hero__scroll" aria-hidden="true">
@@ -53,9 +52,10 @@ export default function Home() {
       <div className="marquee" aria-hidden="true">
         <div className="marquee__track">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            i % 2 === 0
-              ? <span key={i} className="marquee__item">{item}</span>
-              : <span key={i} className="marquee__sep">·</span>
+            <span key={i}>
+              <span className="marquee__item">{item}</span>
+              <span className="marquee__sep">·</span>
+            </span>
           ))}
         </div>
       </div>
@@ -72,10 +72,10 @@ export default function Home() {
                 <div className="intro__line" aria-hidden="true" />
                 <div className="intro__body">
                   <p>
-                    Soy Patricia, wedding planner en Sevilla con mas de diez anos acompanando a parejas que quieren algo real, sin moldes ni tendencias que no les pertenecen.
+                    Soy Patricia, wedding planner en Sevilla con más de diez años acompañando a parejas que quieren algo real, sin moldes ni tendencias que no les pertenecen.
                   </p>
                   <p>
-                    Creo en las bodas donde el espacio respira, la musica os hace llorar y los detalles cuentan vuestra historia. Mi trabajo es que ese dia se parezca a vosotros.
+                    Creo en las bodas donde el espacio respira, la música os hace llorar y los detalles cuentan vuestra historia. Mi trabajo es que ese día se parezca a vosotros.
                   </p>
                 </div>
                 <div className="intro__cta">
@@ -85,7 +85,7 @@ export default function Home() {
               <div className="intro__photo">
                 <Image
                   src="/photos/portfolio-2.jpg"
-                  alt="Pareja en patio andaluz con decoracion floral"
+                  alt="Pareja en patio andaluz con decoración floral"
                   fill
                   sizes="(max-width: 960px) 100vw, 50vw"
                 />
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="stats__grid">
               <div className="stats__item">
                 <span className="stats__num">+10</span>
-                <span className="stats__label">anos de experiencia en Andalucia</span>
+                <span className="stats__label">años de experiencia en Andalucía</span>
               </div>
               <div className="stats__item">
                 <span className="stats__num">+50</span>
@@ -110,24 +110,24 @@ export default function Home() {
               </div>
               <div className="stats__item">
                 <span className="stats__num">100%</span>
-                <span className="stats__label">dedicacion a cada pareja</span>
+                <span className="stats__label">dedicación a cada pareja</span>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* STATEMENT — el momento WOW */}
+      {/* STATEMENT */}
       <section className="statement">
         <div className="statement__inner">
           <Reveal>
             <blockquote className="statement__text">
               Una gran boda no es<br />
-              la mas cara.<br />
-              Es la que mas<br />
+              la más cara.<br />
+              Es la que más<br />
               se parece a vosotros.
             </blockquote>
-            <p className="statement__attr">Patricia Diaz</p>
+            <p className="statement__attr">Patricia Díaz</p>
           </Reveal>
         </div>
       </section>
@@ -139,7 +139,7 @@ export default function Home() {
             <div className="servicios__header">
               <h2 className="headline">Servicios</h2>
               <p className="servicios__header-note">
-                Cada pareja es distinta. Por eso trabajo con un numero limitado de bodas al ano.
+                Cada pareja es distinta. Por eso trabajo con un número limitado de bodas al año.
               </p>
             </div>
           </Reveal>
@@ -174,11 +174,11 @@ export default function Home() {
         <div className="wrap">
           <Reveal>
             <h2 className="headline" style={{ marginBottom: 'clamp(40px, 6vw, 60px)' }}>
-              Como trabajamos
+              Cómo trabajamos
             </h2>
           </Reveal>
           <div className="proceso__grid">
-            {process.map((paso, i) => (
+            {steps.map((paso, i) => (
               <Reveal key={paso.step} delay={(i % 4 as 0 | 1 | 2 | 3)}>
                 <div className="paso">
                   <span className="paso__num" aria-hidden="true">{paso.step}</span>
@@ -208,7 +208,7 @@ export default function Home() {
           <Reveal delay={2}>
             <div style={{ paddingTop: '40px', textAlign: 'center' }}>
               <a href="/bodas" className="btn btn-outline" style={{ marginRight: '16px' }}>
-                Ver galeria completa
+                Ver galería completa
               </a>
               <a
                 href={site.instagramUrl}
@@ -229,7 +229,7 @@ export default function Home() {
           <div className="sobre__photo">
             <Image
               src="/photos/about.jpg"
-              alt="Patricia Diaz, wedding planner en Sevilla"
+              alt="Patricia Díaz, wedding planner en Sevilla"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
             />
@@ -237,16 +237,16 @@ export default function Home() {
           <div className="sobre__content">
             <Reveal>
               <h2 className="sobre__name">Patricia</h2>
-              <p className="sobre__role">Wedding Planner · Sevilla, Andalucia</p>
+              <p className="sobre__role">Wedding Planner · Sevilla, Andalucía</p>
               <div className="sobre__bio">
                 <p>
-                  Llevo mas de diez anos acompanando a parejas en Andalucia y cada boda me sigue emocionando igual que la primera.
+                  Llevo más de diez años acompañando a parejas en Andalucía y cada boda me sigue emocionando igual que la primera.
                 </p>
                 <p>
-                  Creo en el trabajo bien hecho, en los proveedores que se convierten en amigos y en las parejas que saben lo que quieren aunque todavia no sepan expresarlo.
+                  Creo en el trabajo bien hecho, en los proveedores que se convierten en amigos y en las parejas que saben lo que quieren aunque todavía no sepan expresarlo.
                 </p>
                 <p>
-                  Si estas leyendo esto, es posible que seamos una buena combinacion. Hablemos.
+                  Si estás leyendo esto, es posible que seamos una buena combinación. Hablemos.
                 </p>
               </div>
               <div className="sobre__cta">
@@ -270,7 +270,7 @@ export default function Home() {
               <Reveal>
                 <h2 className="contacto__headline">Contadnos vuestra historia</h2>
                 <p className="contacto__body">
-                  La primera conversacion es sin compromiso. Solo quiero conoceros y ver si soy la persona adecuada para acompanaros.
+                  La primera conversación es sin compromiso. Solo quiero conoceros y ver si soy la persona adecuada para acompañaros.
                 </p>
                 <div className="contacto__details">
                   <div className="contacto__detail">

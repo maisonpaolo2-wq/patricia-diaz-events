@@ -5,7 +5,7 @@ import { site } from '@/content/data'
 
 export const metadata: Metadata = {
   title: 'Contacto',
-  description: 'Consulta disponibilidad para tu boda en Andalucia. Primera conversacion sin compromiso.',
+  description: 'Consulta disponibilidad para tu boda en Andalucía. Primera conversación sin compromiso.',
 }
 
 export default function ContactoPage() {
@@ -17,7 +17,7 @@ export default function ContactoPage() {
             <p className="page-hero__eyebrow">{site.name}</p>
             <h1 className="page-hero__title">Hablemos</h1>
             <p className="page-hero__sub">
-              La primera conversacion es gratuita y sin compromiso. Solo quiero conoceros y ver si soy la persona adecuada para acompanaros.
+              La primera conversación es gratuita y sin compromiso. Solo quiero conoceros y ver si soy la persona adecuada para acompañaros.
             </p>
           </Reveal>
         </div>
@@ -30,7 +30,7 @@ export default function ContactoPage() {
               <Reveal>
                 <h2 className="contacto__headline">Contadnos vuestra historia</h2>
                 <p className="contacto__body">
-                  Cuanto mas nos conteis en el primer mensaje, mejor podre orientaros sobre como podria ayudaros.
+                  Cuanto más nos contéis en el primer mensaje, mejor podré orientaros sobre cómo podría ayudaros.
                 </p>
                 <div className="contacto__details">
                   <div className="contacto__detail">
@@ -58,7 +58,7 @@ export default function ContactoPage() {
                   </div>
                   <div className="contacto__detail">
                     <strong>Zona de trabajo</strong>
-                    <span>{site.location} y toda Andalucia</span>
+                    <span>{site.location} y toda Andalucía</span>
                   </div>
                 </div>
               </Reveal>

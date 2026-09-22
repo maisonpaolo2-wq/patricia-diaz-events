@@ -22,11 +22,11 @@ export default function Nav() {
   return (
     <>
       <header className={`nav${scrolled ? ' scrolled' : ''}`} role="banner">
-        <a href="#" className="nav__logo" onClick={close} aria-label={site.name}>
+        <a href="/" className="nav__logo" onClick={close} aria-label={site.name}>
           {site.name}
         </a>
 
-        <nav aria-label="Navegacion principal" style={{ display: 'contents' }}>
+        <nav aria-label="Navegación principal" style={{ display: 'contents' }}>
           <ul className="nav__links" role="list">
             {navLinks.map(link => (
               <li key={link.href}>
@@ -34,7 +34,7 @@ export default function Nav() {
               </li>
             ))}
             <li>
-              <span className="nav__lang" aria-label="Cambio de idioma no disponible" title="Proximamente en ingles">
+              <span className="nav__lang" aria-label="Cambio de idioma no disponible" title="Próximamente en inglés">
                 EN
               </span>
             </li>
@@ -42,14 +42,13 @@ export default function Nav() {
         </nav>
 
         <div className="nav__right">
-          <a href="#contacto" className="nav__cta" style={{ display: 'none' }} aria-hidden="true" />
-          <a href="#contacto" className="nav__cta" tabIndex={0} style={{ display: undefined }}>
-            Hablemos
+          <a href="/contacto" className="nav__cta" tabIndex={0}>
+            Contacto
           </a>
           <button
             className={`nav__hamburger${drawerOpen ? ' open' : ''}`}
             onClick={() => setDrawerOpen(v => !v)}
-            aria-label={drawerOpen ? 'Cerrar menu' : 'Abrir menu'}
+            aria-label={drawerOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={drawerOpen}
             aria-controls="mobile-drawer"
           >
@@ -65,16 +64,19 @@ export default function Nav() {
         className={`drawer${drawerOpen ? ' open' : ''}`}
         role="dialog"
         aria-modal="true"
-        aria-label="Menu de navegacion"
+        aria-label="Menú de navegación"
       >
-        <button className="drawer__close" onClick={close} aria-label="Cerrar menu">×</button>
-        <nav aria-label="Menu movil">
+        <button className="drawer__close" onClick={close} aria-label="Cerrar menú">×</button>
+        <nav aria-label="Menú móvil">
           <ul role="list">
             {navLinks.map(link => (
               <li key={link.href}>
                 <a href={link.href} onClick={close}>{link.label}</a>
               </li>
             ))}
+            <li>
+              <a href="/contacto" onClick={close}>Contacto</a>
+            </li>
           </ul>
         </nav>
         <p className="drawer__footer">@{site.instagram}</p>

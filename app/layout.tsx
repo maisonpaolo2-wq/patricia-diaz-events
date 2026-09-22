@@ -46,7 +46,7 @@ const jsonLd = {
     addressRegion: site.address.region,
     addressCountry: site.address.country,
   },
-  areaServed: 'Andalucia',
+  areaServed: 'Andalucía',
   sameAs: [site.instagramUrl],
   aggregateRating: {
     '@type': 'AggregateRating',

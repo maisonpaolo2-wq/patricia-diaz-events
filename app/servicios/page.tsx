@@ -4,7 +4,7 @@ import { site, services } from '@/content/data'
 
 export const metadata: Metadata = {
   title: 'Servicios',
-  description: 'Planificacion integral, coordinacion del gran dia y asesoramiento para bodas en Andalucia.',
+  description: 'Planificación integral, coordinación del gran día y asesoramiento para bodas en Andalucía.',
 }
 
 export default function ServiciosPage() {
@@ -16,7 +16,7 @@ export default function ServiciosPage() {
             <p className="page-hero__eyebrow">{site.name}</p>
             <h1 className="page-hero__title">Servicios</h1>
             <p className="page-hero__sub">
-              Cada pareja es unica. Trabajo con un numero limitado de bodas al ano para poder dedicarme de verdad a cada una.
+              Cada pareja es única. Trabajo con un número limitado de bodas al año para poder dedicarme de verdad a cada una.
             </p>
           </Reveal>
         </div>
@@ -53,7 +53,7 @@ export default function ServiciosPage() {
               necesito conoceros.<br />
               Sin eso, no puedo hacer bien mi trabajo.
             </blockquote>
-            <p className="statement__attr">Patricia Diaz</p>
+            <p className="statement__attr">Patricia Díaz</p>
           </Reveal>
         </div>
       </section>

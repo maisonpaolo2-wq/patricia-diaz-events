@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
-import { site, process } from '@/content/data'
+import { site, steps } from '@/content/data'
 
 export const metadata: Metadata = {
   title: 'Patricia',
-  description: 'Conoce a Patricia Diaz, wedding planner en Sevilla con mas de diez anos de experiencia en bodas en Andalucia.',
+  description: 'Conoce a Patricia Díaz, wedding planner en Sevilla con más de diez años de experiencia en bodas en Andalucía.',
 }
 
 export default function SobreMiPage() {
@@ -17,19 +17,18 @@ export default function SobreMiPage() {
             <p className="page-hero__eyebrow">{site.name}</p>
             <h1 className="page-hero__title">Patricia</h1>
             <p className="page-hero__sub">
-              Wedding planner en Sevilla. Mas de diez anos acompanando a parejas en Andalucia.
+              Wedding planner en Sevilla. Más de diez años acompañando a parejas en Andalucía.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* BIO SPLIT */}
       <section id="sobre-mi">
         <div className="sobre__split">
           <div className="sobre__photo">
             <Image
               src="/photos/about.jpg"
-              alt="Patricia Diaz, wedding planner en Sevilla"
+              alt="Patricia Díaz, wedding planner en Sevilla"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
               priority
@@ -41,16 +40,16 @@ export default function SobreMiPage() {
               <p className="sobre__role">Wedding Planner · {site.location}</p>
               <div className="sobre__bio">
                 <p>
-                  Llevo mas de diez anos acompanando a parejas en Andalucia y cada boda me sigue emocionando igual que la primera. No me canse de este trabajo porque no hay dos bodas iguales.
+                  Llevo más de diez años acompañando a parejas en Andalucía y cada boda me sigue emocionando igual que la primera. No me cansé de este trabajo porque no hay dos bodas iguales.
                 </p>
                 <p>
-                  Creo en el trabajo bien hecho, en los proveedores que se convierten en amigos y en las parejas que saben lo que quieren aunque todavia no sepan expresarlo.
+                  Creo en el trabajo bien hecho, en los proveedores que se convierten en amigos y en las parejas que saben lo que quieren aunque todavía no sepan expresarlo.
                 </p>
                 <p>
-                  Mi objetivo es sencillo: que el dia mas importante de vuestra vida se parezca a vosotros. No a la tendencia del momento, no a lo que hicieron vuestros amigos. A vosotros.
+                  Mi objetivo es sencillo: que el día más importante de vuestra vida se parezca a vosotros. No a la tendencia del momento, no a lo que hicieron vuestros amigos. A vosotros.
                 </p>
                 <p>
-                  Si estas leyendo esto, es posible que seamos una buena combinacion. Hablemos sin compromiso.
+                  Si estás leyendo esto, es posible que seamos una buena combinación. Hablemos sin compromiso.
                 </p>
               </div>
               <div className="sobre__cta">
@@ -61,7 +60,6 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      {/* FILOSOFIA */}
       <section className="statement">
         <div className="statement__inner">
           <Reveal>
@@ -70,21 +68,20 @@ export default function SobreMiPage() {
               para trabajar bien<br />
               con cada una de ellas.
             </blockquote>
-            <p className="statement__attr">Patricia Diaz</p>
+            <p className="statement__attr">Patricia Díaz</p>
           </Reveal>
         </div>
       </section>
 
-      {/* PROCESO */}
       <section id="proceso" className="section">
         <div className="wrap">
           <Reveal>
             <h2 className="headline" style={{ marginBottom: 'clamp(40px, 6vw, 60px)' }}>
-              Como trabajamos
+              Cómo trabajamos
             </h2>
           </Reveal>
           <div className="proceso__grid">
-            {process.map((paso, i) => (
+            {steps.map((paso, i) => (
               <Reveal key={paso.step} delay={(i % 4 as 0 | 1 | 2 | 3)}>
                 <div className="paso">
                   <span className="paso__num" aria-hidden="true">{paso.step}</span>
@@ -98,7 +95,7 @@ export default function SobreMiPage() {
           </div>
           <Reveal delay={2}>
             <div style={{ paddingTop: '56px', textAlign: 'center' }}>
-              <a href="/contacto" className="btn btn-dark">Empezar la conversacion</a>
+              <a href="/contacto" className="btn btn-dark">Empezar la conversación</a>
             </div>
           </Reveal>
         </div>
